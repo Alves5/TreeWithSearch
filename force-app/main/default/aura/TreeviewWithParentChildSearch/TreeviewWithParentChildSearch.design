@@ -1,0 +1,6 @@
+<design:component>
+    <design:attribute name="parentObj" label="Objeto Pai" />
+    <design:attribute name="childObj" label="Objeto Filho" />
+    <design:attribute name="parentObjNameField" label="Campo Nome do Objeto Pai" />
+    <design:attribute name="childObjNameField" label="Campo Nome do Objeto Filho" />
+</design:component>

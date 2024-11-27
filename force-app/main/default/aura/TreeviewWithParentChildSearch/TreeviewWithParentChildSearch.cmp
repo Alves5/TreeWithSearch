@@ -1,4 +1,4 @@
-<aura:component controller="TreeviewParentChildContrl"> 
+<aura:component controller="TreeviewParentChildContrl" implements="flexipage:availableForAllPageTypes,force:appHostable" access="global"> 
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
     <!-- Atributos -->
@@ -16,19 +16,22 @@
     <lightning:spinner aura:id="Id_spinner" variant="brand" size="large" class="slds-hide" />
 
     <!-- Layout Principal -->
-    <div class="slds-m-around_medium">
-        <lightning:layout>
-            <lightning:layoutItem size="3" padding="around-small">
-                <div onkeyup="{!c.Search}">
-                    <lightning:input aura:id="searchField" 
-                                     placeholder="Quick Find"
-                                     label="Enter String" 
-                                     type="search" />
-                </div>
-            </lightning:layoutItem>
-        </lightning:layout>
-
-        <!-- Componente de Árvore -->
-        <lightning:tree items="{!v.items}" id="treeview" />
-    </div>
+    <div class="custom-tree-container">
+        <div class="slds-m-around_medium">
+            <lightning:layout>
+                <lightning:layoutItem size="3" padding="around-small">
+                    <div onkeyup="{!c.Search}">
+                        <lightning:input aura:id="searchField" 
+                                         placeholder="Quick Find"
+                                         type="search"
+                                          onchange="{!c.handleSearchClear}"/>
+                    </div>
+                </lightning:layoutItem>
+            </lightning:layout>
+    
+            <!-- Componente de Árvore -->
+            
+                <lightning:tree items="{!v.items}" id="treeview"/>
+        </div>
+	</div>
 </aura:component>

@@ -1,0 +1,11 @@
+.THIS .slds-m-around_medium {
+    border: 2px solid #005fb2; /* Borda do contêiner */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #f4f6f9; /* Cor de fundo */
+}
+
+.THIS .slds-m-around_medium .custom-tree-container lightning-tree {
+    font-size: 14px; /* Tamanho da fonte no componente interno */
+    color: #333333; /* Cor do texto */
+}
